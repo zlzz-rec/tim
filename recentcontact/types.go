@@ -7,7 +7,7 @@
 
 package recentcontact
 
-import "github.com/dobyte/tencent-im/internal/types"
+import "github.com/zlzz-rec/tim/internal/types"
 
 // FetchSessionsArg 拉取会话列表（参数）
 type FetchSessionsArg struct {

@@ -14,15 +14,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dobyte/tencent-im"
-	"github.com/dobyte/tencent-im/account"
-	"github.com/dobyte/tencent-im/group"
-	"github.com/dobyte/tencent-im/operation"
-	"github.com/dobyte/tencent-im/private"
-	"github.com/dobyte/tencent-im/profile"
-	"github.com/dobyte/tencent-im/push"
-	"github.com/dobyte/tencent-im/recentcontact"
-	"github.com/dobyte/tencent-im/sns"
+	"github.com/zlzz-rec/tim"
+	"github.com/zlzz-rec/tim/account"
+	"github.com/zlzz-rec/tim/group"
+	"github.com/zlzz-rec/tim/operation"
+	"github.com/zlzz-rec/tim/private"
+	"github.com/zlzz-rec/tim/profile"
+	"github.com/zlzz-rec/tim/push"
+	"github.com/zlzz-rec/tim/recentcontact"
+	"github.com/zlzz-rec/tim/sns"
 )
 
 const (
@@ -41,6 +41,7 @@ const (
 
 func NewIM() im.IM {
 	return im.NewIM(&im.Options{
+		BaseUrl:    "adminapiusa.im.qcloud.com",
 		AppId:      1400564830,
 		AppSecret:  "0d2a321b087fdb8fd5ed5ea14fe0489139086eb1b03541774fc9feeab8f2bfd3",
 		UserId:     "administrator",

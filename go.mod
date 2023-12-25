@@ -1,4 +1,4 @@
-module github.com/dobyte/tencent-im
+module github.com/zlzz-rec/tim
 
 go 1.16
 

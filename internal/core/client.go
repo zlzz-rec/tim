@@ -14,9 +14,9 @@ import (
 
 	"github.com/dobyte/http"
 
-	"github.com/dobyte/tencent-im/internal/enum"
-	"github.com/dobyte/tencent-im/internal/sign"
-	"github.com/dobyte/tencent-im/internal/types"
+	"github.com/zlzz-rec/tim/internal/enum"
+	"github.com/zlzz-rec/tim/internal/sign"
+	"github.com/zlzz-rec/tim/internal/types"
 )
 
 const (
@@ -49,6 +49,7 @@ type client struct {
 }
 
 type Options struct {
+	BaseUrl    string
 	AppId      int    // 应用SDKAppID，可在即时通信 IM 控制台 的应用卡片中获取。
 	AppSecret  string // 密钥信息，可在即时通信 IM 控制台 的应用详情页面中获取，具体操作请参见 获取密钥
 	UserId     string // 用户ID
@@ -61,7 +62,7 @@ func NewClient(opt *Options) Client {
 	c.opt = opt
 	c.client = http.NewClient()
 	c.client.SetContentType(http.ContentTypeJson)
-	c.client.SetBaseUrl(defaultBaseUrl)
+	c.client.SetBaseUrl(opt.BaseUrl)
 
 	return c
 }
