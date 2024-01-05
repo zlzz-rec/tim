@@ -74,7 +74,14 @@ func (c *client) Get(serviceName string, command string, data interface{}, resp 
 
 // Post POST请求
 func (c *client) Post(serviceName string, command string, data interface{}, resp interface{}) error {
-	return c.request(http.MethodPost, serviceName, command, data, resp)
+	err := c.request(http.MethodPost, serviceName, command, data, resp)
+
+	fmt.Printf("%+v\n", serviceName)
+	fmt.Printf("%+v\n", command)
+	fmt.Printf("%+v\n", data)
+	fmt.Printf("%+v\n", resp)
+
+	return err
 }
 
 // Put PUT请求
