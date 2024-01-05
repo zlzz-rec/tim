@@ -74,7 +74,7 @@ func (c *client) Get(serviceName string, command string, data interface{}, resp 
 
 // Post POST请求
 func (c *client) Post(serviceName string, command string, data interface{}, resp interface{}) error {
-	return err := c.request(http.MethodPost, serviceName, command, data, resp)
+	return c.request(http.MethodPost, serviceName, command, data, resp)
 }
 
 // Put PUT请求
